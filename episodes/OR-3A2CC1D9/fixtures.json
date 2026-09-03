@@ -1,0 +1,81 @@
+{
+  "adapter_key": "generated.idempotent-retry-policy",
+  "cases": [
+    {
+      "actual": {
+        "classification": "NEW_OPERATION",
+        "decision": "ACCEPT"
+      },
+      "evidence_hash": "9feb68672ffd1139d4c9e59cff1470e1b4821e0e691de61a7e49a510975cd1e9",
+      "expected": {
+        "classification": "NEW_OPERATION",
+        "decision": "ACCEPT"
+      },
+      "kind": "NEW_OPERATION",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "ALREADY_COMPLETED",
+        "decision": "NOOP"
+      },
+      "evidence_hash": "263d677ae2596e6eb962c7bc5002820f11e01b4fbd4bbef26a290be6ccefee5a",
+      "expected": {
+        "classification": "ALREADY_COMPLETED",
+        "decision": "NOOP"
+      },
+      "kind": "COMPLETED_REPEAT",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "SAFE_RETRY",
+        "decision": "RETRY"
+      },
+      "evidence_hash": "703b7993a1932c6f02e952b0362b3478bf30c5a6c45f182d27ee50507643254e",
+      "expected": {
+        "classification": "SAFE_RETRY",
+        "decision": "RETRY"
+      },
+      "kind": "FAILED_RETRY",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "PAYLOAD_CONFLICT",
+        "decision": "OPERATOR_REQUIRED"
+      },
+      "evidence_hash": "0b18bf21714bbbfa87668b3100671980cde12ea9de20a174fb75467fb1218bb8",
+      "expected": {
+        "classification": "PAYLOAD_CONFLICT",
+        "decision": "OPERATOR_REQUIRED"
+      },
+      "kind": "CHANGED_PAYLOAD",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "MISSING_OPERATION_ID",
+        "decision": "BLOCK"
+      },
+      "evidence_hash": "3e2809f839858d19f791dc05b609e3800d81da5afb14aec37157791b1e1c8d8b",
+      "expected": {
+        "classification": "MISSING_OPERATION_ID",
+        "decision": "BLOCK"
+      },
+      "kind": "MISSING_ID",
+      "name": "classification and decision match",
+      "passed": true
+    }
+  ],
+  "contract_hash": "52cc4b47c4a8e1b0aec6a3b19a6d8842faa9673eff52a9e8f9a07ce78b3c6de1",
+  "episode_id": "OR-3A2CC1D9",
+  "family": "idempotent-retry",
+  "implementation_hash": "8126374a219d09c3147a86789b6e1e10dcf396e3ef59026e44f415038a8e5b65",
+  "package_id": "pub-705c782d4b51475a80ab1502a1f31513",
+  "passed": true
+}
