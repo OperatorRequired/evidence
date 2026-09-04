@@ -1,0 +1,81 @@
+{
+  "adapter_key": "generated.header-drift-policy",
+  "cases": [
+    {
+      "actual": {
+        "classification": "EXPECTED",
+        "decision": "ACCEPT"
+      },
+      "evidence_hash": "9c83d66daa45bf9849755884654422b05e5dde5d34e31fcc9da09e2df3479922",
+      "expected": {
+        "classification": "EXPECTED",
+        "decision": "ACCEPT"
+      },
+      "kind": "EXPECTED",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "REORDERED",
+        "decision": "ACCEPT"
+      },
+      "evidence_hash": "0208187121b4f0942e0d5e756ca3acb9033997880036818597573570099b0f9a",
+      "expected": {
+        "classification": "REORDERED",
+        "decision": "ACCEPT"
+      },
+      "kind": "REORDERED",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "MISSING_REQUIRED",
+        "decision": "BLOCK"
+      },
+      "evidence_hash": "bdb5721ef9666f145b5773e3194fd2e7bd1576850431a4122bda3e4642af8aa2",
+      "expected": {
+        "classification": "MISSING_REQUIRED",
+        "decision": "BLOCK"
+      },
+      "kind": "MISSING_REQUIRED",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "UNKNOWN_HEADER",
+        "decision": "OPERATOR_REQUIRED"
+      },
+      "evidence_hash": "7fcfbedf548e344216434e6c476e83dd170e627f0f9cce1385108ab8c10d1df6",
+      "expected": {
+        "classification": "UNKNOWN_HEADER",
+        "decision": "OPERATOR_REQUIRED"
+      },
+      "kind": "UNKNOWN_HEADER",
+      "name": "classification and decision match",
+      "passed": true
+    },
+    {
+      "actual": {
+        "classification": "DUPLICATE_HEADER",
+        "decision": "BLOCK"
+      },
+      "evidence_hash": "5be1fc785baa61dedaa34f4a0b901a1954011fb66c3528e3181fc04c7adad125",
+      "expected": {
+        "classification": "DUPLICATE_HEADER",
+        "decision": "BLOCK"
+      },
+      "kind": "DUPLICATE_HEADER",
+      "name": "classification and decision match",
+      "passed": true
+    }
+  ],
+  "contract_hash": "3bf919acf984d3400d77ca9593d2df0d9cab803c4f8ddfc4a3fb53dc8c1e2bfa",
+  "episode_id": "OR-03858D7E",
+  "family": "header-drift",
+  "implementation_hash": "e36804808c9ede3431f183edd2b30e26a24dfa3768e547d5ad289059036c3306",
+  "package_id": "pub-a7b91e0a5bd2463291e242a7bdc4c73f",
+  "passed": true
+}
